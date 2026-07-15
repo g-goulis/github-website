@@ -22,7 +22,6 @@
             <div class="nav-actions">
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#about" class="nav-link">Inventory</a></li>
                         <li><a href="#experience" class="nav-link">Service Mesh</a></li>
                         <li><a href="#education" class="nav-link">Education</a></li>
                         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -40,62 +39,17 @@
 
     <main>
         <section class="hero" id="hero">
-            <div class="hero-bg"></div>
             <canvas id="hero-canvas"></canvas>
             <div class="container hero-container">
                 <div class="hero-content fade-in-up">
                     <span class="badge pixel-badge">SYSTEM.ONLINE</span>
                     <h1 class="hero-title glitch" data-text="Gabriel Goulis">Gabriel Goulis</h1>
-                    <p class="hero-subtitle">Software Engineering PhD Student @ UofA<br>Distributed Systems | Microservices | Pixel Art & Exploring</p>
+                    <p class="hero-subtitle">Software Engineering PhD Student @ UofA<br>Distributed Systems | Microservices | Static Analysis</p>
                     <div class="hero-actions">
                         <a href="#experience" class="btn btn-primary btn-lg">Explore Architecture</a>
                         <a href="https://scholar.google.com/citations?user=7l49DR8AAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary btn-lg"><i class="fa-solid fa-graduation-cap"></i></a>
                         <a href="https://github.com/g-goulis" target="_blank" class="btn btn-secondary btn-lg"><i class="devicon-github-original"></i></a>
                         <a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank" class="btn btn-secondary btn-lg"><i class="devicon-linkedin-plain"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title text-gradient">The Inventory</h2>
-                    <p class="section-subtitle">Beyond the code. My personal interests and passions.</p>
-                </div>
-                <div class="inventory-layout fade-in-up delay-1">
-                    <div class="inventory-visual glass-card hover-lift">
-                        <img src="assets/images/inventory_bg.jpg" alt="Cozy Pixel Art Room" class="inventory-img">
-                    </div>
-                    <div class="inventory-grid-container glass-card">
-                        <h3>Equipped Skills & Hobbies</h3>
-                        <div class="inventory-grid">
-                            <div class="inventory-slot tool-tip" data-tip="Cooking & Foods">
-                                <i class="fa-solid fa-utensils slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="PC Building & Gaming">
-                                <i class="fa-solid fa-computer slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Cats & Dogs">
-                                <i class="fa-solid fa-paw slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Exploring Mountains & Rivers">
-                                <i class="fa-solid fa-mountain-sun slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Shows: Breaking Bad, GoT, JJK, Suits">
-                                <i class="fa-solid fa-tv slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Exercising">
-                                <i class="fa-solid fa-dumbbell slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Trading Markets">
-                                <i class="fa-solid fa-chart-line slot-icon"></i>
-                            </div>
-                            <div class="inventory-slot tool-tip" data-tip="Connecting Microservices">
-                                <i class="fa-solid fa-network-wired slot-icon"></i>
-                            </div>
-                        </div>
-                        <p class="inventory-desc">I value both clean looks and intricacy—whether in code, the games I play, the food I try, or the natural mountains and rivers I explore.</p>
                     </div>
                 </div>
             </div>
@@ -113,8 +67,9 @@
                     <div class="mesh-center-line"></div>
                     
                     <div class="mesh-node-item fade-in-up left-node" data-node="1">
-                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"><i class="fa-solid fa-server node-icon"></i></div></div>
                         <div class="glass-card mesh-card hover-lift">
+                            <div class="node-type">System Architecture Node</div>
                             <h3 class="role">Platform Developer</h3>
                             <h4 class="company">OFFICErING</h4>
                             <p class="mesh-date">Jan 2025 - July 2026</p>
@@ -131,8 +86,9 @@
                     </div>
 
                     <div class="mesh-node-item fade-in-up right-node" data-node="2">
-                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"><i class="fa-solid fa-network-wired node-icon"></i></div></div>
                         <div class="glass-card mesh-card hover-lift">
+                            <div class="node-type">API Gateway Node</div>
                             <h3 class="role">Full Stack Developer</h3>
                             <h4 class="company">ICPC</h4>
                             <p class="mesh-date">Dec 2024 - June 2025</p>
@@ -149,8 +105,9 @@
                     </div>
                     
                     <div class="mesh-node-item fade-in-up left-node" data-node="3">
-                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"><i class="fa-solid fa-microchip node-icon"></i></div></div>
                         <div class="glass-card mesh-card hover-lift">
+                            <div class="node-type">Analysis Node</div>
                             <h3 class="role">Student Researcher</h3>
                             <h4 class="company">UofA (Oulu, Finland)</h4>
                             <p class="mesh-date">May 2024 - Aug 2024</p>
@@ -165,8 +122,9 @@
                     </div>
                     
                     <div class="mesh-node-item fade-in-up right-node" data-node="4">
-                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"><i class="fa-solid fa-users node-icon"></i></div></div>
                         <div class="glass-card mesh-card hover-lift">
+                            <div class="node-type">Client Facing Service</div>
                             <h3 class="role">Corporate Tech Intern</h3>
                             <h4 class="company">H-E-B</h4>
                             <p class="mesh-date">May 2023 - July 2023</p>
@@ -181,8 +139,9 @@
                     </div>
 
                     <div class="mesh-node-item fade-in-up left-node" data-node="5">
-                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"><i class="fa-solid fa-database node-icon"></i></div></div>
                         <div class="glass-card mesh-card hover-lift">
+                            <div class="node-type">Data Pipeline Node</div>
                             <h3 class="role">Junior Developer</h3>
                             <h4 class="company">OfficeRing</h4>
                             <p class="mesh-date">June 2019 - Aug 2022</p>
