@@ -1,44 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Goulis | Software Engineer</title>
-    <meta name="description" content="Personal portfolio and resume for Gabriel Goulis, Software Engineering PhD Student at University of Arizona.">
+    <meta name="description" content="Personal portfolio for Gabriel Goulis">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Devicon for Technology Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Devicon -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script>
-        // Set theme immediately to avoid flash of wrong theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    </script>
 </head>
 <body>
     <header class="header" id="header">
         <div class="container nav-container">
-            <a href="#" class="logo">Gabriel Goulis.</a>
+            <a href="#" class="logo glitch-hover">Gabriel Goulis.</a>
             <div class="nav-actions">
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#research" class="nav-link">Research</a></li>
-                        <li><a href="#experience" class="nav-link">Experience</a></li>
+                        <li><a href="#about" class="nav-link">Inventory</a></li>
+                        <li><a href="#experience" class="nav-link">Service Mesh</a></li>
                         <li><a href="#education" class="nav-link">Education</a></li>
                         <li><a href="#skills" class="nav-link">Skills</a></li>
-                        <li><a href="assets/Gabriel_Goulis_Resume.pdf" class="btn btn-primary nav-cta" download>Download Resume</a></li>
+                        <li><a href="assets/Gabriel_Goulis_Resume.pdf" class="btn btn-primary nav-cta" download>Resume</a></li>
                     </ul>
                 </nav>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                    <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                    <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-                </button>
                 <button class="mobile-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -49,55 +39,63 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <canvas id="hero-canvas"></canvas>
             <div class="container hero-container">
                 <div class="hero-content fade-in-up">
-                    <span class="badge">Open to Opportunities</span>
-                    <h1 class="hero-title">Gabriel <span class="text-gradient">Goulis</span></h1>
-                    <p class="hero-subtitle">Software Engineering PhD Student at University of Arizona.<br>Specializing in distributed systems, microservice architecture, and static analysis.</p>
+                    <span class="badge pixel-badge">SYSTEM.ONLINE</span>
+                    <h1 class="hero-title glitch" data-text="Gabriel Goulis">Gabriel Goulis</h1>
+                    <p class="hero-subtitle">Software Engineering PhD Student @ UofA<br>Distributed Systems | Microservices | Pixel Art & Exploring</p>
                     <div class="hero-actions">
-                        <a href="#experience" class="btn btn-primary btn-lg">View Experience</a>
-                        <a href="https://scholar.google.com/citations?user=7l49DR8AAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary btn-lg">Google Scholar</a>
-                        <a href="https://github.com/g-goulis" target="_blank" class="btn btn-secondary btn-lg">GitHub</a>
-                        <a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank" class="btn btn-secondary btn-lg">LinkedIn</a>
+                        <a href="#experience" class="btn btn-primary btn-lg">Explore Architecture</a>
+                        <a href="https://scholar.google.com/citations?user=7l49DR8AAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary btn-lg"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://github.com/g-goulis" target="_blank" class="btn btn-secondary btn-lg"><i class="devicon-github-original"></i></a>
+                        <a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank" class="btn btn-secondary btn-lg"><i class="devicon-linkedin-plain"></i></a>
                     </div>
                 </div>
-
             </div>
-            <div class="hero-glow"></div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">Passionate about pushing the boundaries of software engineering.</p>
+                    <h2 class="section-title text-gradient">The Inventory</h2>
+                    <p class="section-subtitle">Beyond the code. My personal interests and passions.</p>
                 </div>
-                <div class="glass-card fade-in-up delay-1 about-card">
-                    <p>I am an avid student of Computer Science specifically software engineering. I possess a solid foundation in both frontend and backend development from prior experiences in microservice systems, managing web systems and other assorted roles.</p>
-                    <p>As a recent graduate of Baylor University with a Bachelor's in Computer Science and multiple semesters of experience in academic research, I naturally found great interest in pursuing this further. With 1 publication and 2 pending publications, I only grow more invested in digging further beneath the surface of concepts like Microservice Architecture.</p>
-                    <p>I find great joy in learning new programming concepts, languages, paradigms and frameworks. Solving challenging issues gives me a sense of accomplishment I cannot find outside of Computer Science. Personally I see no barrier to what I can achieve with the current state of technology the only bound is the extent of my creativity and passion which is only growing.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="research" class="section">
-            <div class="container">
-                <div class="section-header fade-in-up">
-                    <h2 class="section-title">Research & Publications</h2>
-                    <p class="section-subtitle">Advancing the field of software architecture.</p>
-                </div>
-                <div class="glass-card research-card fade-in-up delay-1 hover-lift">
-                    <div class="publication-item">
-                        <h3>Change impact analysis in microservice systems: A systematic literature review</h3>
-                        <p class="text-muted">Published: October 2024</p>
+                <div class="inventory-layout fade-in-up delay-1">
+                    <div class="inventory-visual glass-card hover-lift">
+                        <img src="assets/images/inventory_bg.jpg" alt="Cozy Pixel Art Room" class="inventory-img">
                     </div>
-                    <div class="publication-item">
-                        <h3>Towards Change Impact Analysis in Microservices-based System Evolution</h3>
-                        <p class="text-muted">Pending Publication</p>
-                    </div>
-                    <div style="text-align: center; margin-top: 1rem;">
-                        <a href="https://scholar.google.com/citations?user=7l49DR8AAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-primary">View all on Google Scholar</a>
+                    <div class="inventory-grid-container glass-card">
+                        <h3>Equipped Skills & Hobbies</h3>
+                        <div class="inventory-grid">
+                            <div class="inventory-slot tool-tip" data-tip="Cooking & Foods">
+                                <i class="fa-solid fa-utensils slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="PC Building & Gaming">
+                                <i class="fa-solid fa-computer slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Cats & Dogs">
+                                <i class="fa-solid fa-paw slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Exploring Mountains & Rivers">
+                                <i class="fa-solid fa-mountain-sun slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Shows: Breaking Bad, GoT, JJK, Suits">
+                                <i class="fa-solid fa-tv slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Exercising">
+                                <i class="fa-solid fa-dumbbell slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Trading Markets">
+                                <i class="fa-solid fa-chart-line slot-icon"></i>
+                            </div>
+                            <div class="inventory-slot tool-tip" data-tip="Connecting Microservices">
+                                <i class="fa-solid fa-network-wired slot-icon"></i>
+                            </div>
+                        </div>
+                        <p class="inventory-desc">I value both clean looks and intricacy—whether in code, the games I play, the food I try, or the natural mountains and rivers I explore.</p>
                     </div>
                 </div>
             </div>
@@ -106,151 +104,99 @@
         <section id="experience" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">Experience</h2>
-                    <p class="section-subtitle">My professional journey so far. Click items to expand.</p>
+                    <h2 class="section-title text-gradient">Service Mesh</h2>
+                    <p class="section-subtitle">Tracing the architecture of my professional journey.</p>
                 </div>
                 
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-logo-wrapper">
-                            <!-- Using generic brief case icon as placeholder if logo missing -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div class="timeline-title-group">
-                                    <h3>Platform Developer</h3>
-                                    <h4>OFFICErING</h4>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span class="timeline-date">Jan 2025 - July 2026</span>
-                                    <span class="timeline-duration">1 yr 7 mos</span>
-                                </div>
-                                <span class="timeline-indicator">▼</span>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Built automated compliance monitoring that triggered real-time alerts for policy violations.</li>
-                                    <li>Designed an automated testing framework using SIP user agents via DTMF-driven interactions.</li>
-                                    <li>Built a Python pipeline for automated lead generation and AI-driven enrichment of 30,000 leads.</li>
-                                    <li>Modernized legacy codebases integrating OpenTelemetry for distributed tracing and metrics.</li>
-                                    <li>Designed CI/CD pipelines to streamline deployment of container images.</li>
-                                </ul>
+                <div class="service-mesh-container">
+                    <!-- Central Animated Line -->
+                    <div class="mesh-center-line"></div>
+                    
+                    <div class="mesh-node-item fade-in-up left-node" data-node="1">
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="glass-card mesh-card hover-lift">
+                            <h3 class="role">Platform Developer</h3>
+                            <h4 class="company">OFFICErING</h4>
+                            <p class="mesh-date">Jan 2025 - July 2026</p>
+                            <ul class="mesh-details">
+                                <li>Built automated compliance monitoring that triggered real-time alerts.</li>
+                                <li>Python pipeline for automated lead generation and AI enrichment of 30,000 leads.</li>
+                                <li>Modernized legacy codebases integrating OpenTelemetry for distributed tracing.</li>
+                            </ul>
+                            <div class="mesh-tech">
+                                <i class="devicon-python-plain colored"></i>
+                                <i class="devicon-docker-plain colored"></i>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-logo-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div class="timeline-title-group">
-                                    <h3>Full Stack Developer</h3>
-                                    <h4>ICPC</h4>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span class="timeline-date">Dec 2024 - June 2025</span>
-                                    <span class="timeline-duration">7 mos</span>
-                                </div>
-                                <span class="timeline-indicator">▼</span>
+                    <div class="mesh-node-item fade-in-up right-node" data-node="2">
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="glass-card mesh-card hover-lift">
+                            <h3 class="role">Full Stack Developer</h3>
+                            <h4 class="company">ICPC</h4>
+                            <p class="mesh-date">Dec 2024 - June 2025</p>
+                            <ul class="mesh-details">
+                                <li>Architected high-throughput REST APIs, cutting system latency by 90%.</li>
+                                <li>Modernized cloud storage architecture using AWS S3 presigned URLs.</li>
+                                <li>Optimized database queries across 10+ tables.</li>
+                            </ul>
+                            <div class="mesh-tech">
+                                <i class="devicon-spring-original colored"></i>
+                                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
                             </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Architected high-throughput REST APIs, cutting system latency by 90%.</li>
-                                    <li>Modernized cloud storage architecture using AWS S3 presigned URLs offloading 99% of bandwidth.</li>
-                                    <li>Optimized database queries across 10+ tables, reducing memory footprint by 50%.</li>
-                                    <li>Automated compliance pipelines in Spring Boot.</li>
-                                    <li>Developed scalable document generation engines for PDF credentials.</li>
-                                </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mesh-node-item fade-in-up left-node" data-node="3">
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="glass-card mesh-card hover-lift">
+                            <h3 class="role">Student Researcher</h3>
+                            <h4 class="company">UofA (Oulu, Finland)</h4>
+                            <p class="mesh-date">May 2024 - Aug 2024</p>
+                            <ul class="mesh-details">
+                                <li>Published: Change impact analysis in microservice systems: A systematic literature review.</li>
+                                <li>Developed a Java tool using 40+ indicators to track Architectural Degradation over time.</li>
+                            </ul>
+                            <div class="mesh-tech">
+                                <i class="devicon-java-plain colored"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mesh-node-item fade-in-up right-node" data-node="4">
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="glass-card mesh-card hover-lift">
+                            <h3 class="role">Corporate Tech Intern</h3>
+                            <h4 class="company">H-E-B</h4>
+                            <p class="mesh-date">May 2023 - July 2023</p>
+                            <ul class="mesh-details">
+                                <li>Updated employee training courses using new xAPI standard serving 145,000+ partners.</li>
+                                <li>Constructed internal tools to build new courses using React.</li>
+                            </ul>
+                            <div class="mesh-tech">
+                                <i class="devicon-react-original colored"></i>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 3 -->
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-logo-wrapper">
-                            <img src="assets/images/finland.png" alt="University of Arizona" class="timeline-logo" onerror="this.style.display='none'">
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div class="timeline-title-group">
-                                    <h3>Student Researcher</h3>
-                                    <h4>University of Arizona (Oulu, Finland)</h4>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span class="timeline-date">May 2024 - Aug 2024</span>
-                                    <span class="timeline-duration">4 mos</span>
-                                </div>
-                                <span class="timeline-indicator">▼</span>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Collaborated on research papers on software architecture debt and architectural rule violations.</li>
-                                    <li>Developed a Java tool using 40+ indicators to track Architectural Degradation over time.</li>
-                                    <li>Leveraged control dependencies like REST calls to capture temporal data on system architecture.</li>
-                                </ul>
+                    <div class="mesh-node-item fade-in-up left-node" data-node="5">
+                        <div class="mesh-dot-wrapper"><div class="mesh-dot"></div></div>
+                        <div class="glass-card mesh-card hover-lift">
+                            <h3 class="role">Junior Developer</h3>
+                            <h4 class="company">OfficeRing</h4>
+                            <p class="mesh-date">June 2019 - Aug 2022</p>
+                            <ul class="mesh-details">
+                                <li>Deployed a Node.js microservice to replicate data to S3 buckets, reducing server load.</li>
+                                <li>Built system health tests in Postman and deployed in Node.js and PM2.</li>
+                            </ul>
+                            <div class="mesh-tech">
+                                <i class="devicon-nodejs-plain colored"></i>
+                                <i class="devicon-php-plain colored"></i>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Item 4 -->
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-logo-wrapper">
-                            <img src="assets/images/heb.png" alt="H-E-B" class="timeline-logo" onerror="this.style.display='none'">
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div class="timeline-title-group">
-                                    <h3>Corporate Technology Intern</h3>
-                                    <h4>H-E-B</h4>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span class="timeline-date">May 2023 - July 2023</span>
-                                    <span class="timeline-duration">3 mos</span>
-                                </div>
-                                <span class="timeline-indicator">▼</span>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Updated employee training courses using new xAPI standard serving 145,000+ partners.</li>
-                                    <li>Constructed internal tools to build new courses using React.</li>
-                                    <li>Setup an open source LRS prototype using Docker.</li>
-                                    <li>Rebuilt training course template decreasing load times by over 100%.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div class="timeline-item fade-in-up">
-                        <div class="timeline-logo-wrapper">
-                            <img src="assets/images/officering.jpg" alt="OfficeRing" class="timeline-logo" onerror="this.style.display='none'">
-                        </div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-header">
-                                <div class="timeline-title-group">
-                                    <h3>Junior Developer</h3>
-                                    <h4>OfficeRing</h4>
-                                </div>
-                                <div class="timeline-meta">
-                                    <span class="timeline-date">June 2019 - Aug 2022</span>
-                                    <span class="timeline-duration">3 yrs 3 mos</span>
-                                </div>
-                                <span class="timeline-indicator">▼</span>
-                            </div>
-                            <div class="timeline-body">
-                                <ul>
-                                    <li>Utilized PHP to implement backend functionality, supporting the adoption of 4 new features.</li>
-                                    <li>Deployed a Node.js microservice to replicate data to S3 buckets, reducing server load.</li>
-                                    <li>Built system health tests in Postman and deployed in Node.js and PM2.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -258,8 +204,7 @@
         <section id="education" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">Education</h2>
-                    <p class="section-subtitle">Academic background.</p>
+                    <h2 class="section-title text-gradient">Education</h2>
                 </div>
                 <div class="grid education-grid">
                     <div class="glass-card hover-lift fade-in-up edu-card">
@@ -267,7 +212,7 @@
                             <img src="assets/images/uofa.png" alt="University of Arizona" class="edu-logo" onerror="this.style.display='none'">
                         </div>
                         <h3>University of Arizona</h3>
-                        <h4>PhD in Software Engineering (CS)</h4>
+                        <h4>PhD in Software Engineering</h4>
                         <p class="text-muted">July 2024 - August 2028</p>
                     </div>
                     <div class="glass-card hover-lift fade-in-up delay-1 edu-card">
@@ -275,26 +220,17 @@
                             <img src="assets/images/baylor.png" alt="Baylor University" class="edu-logo" onerror="this.style.display='none'">
                         </div>
                         <h3>Baylor University</h3>
-                        <h4>Bachelor of Science in Computer Science</h4>
+                        <h4>BS in Computer Science</h4>
                         <p class="text-muted">July 2021 - May 2024</p>
-                    </div>
-                    <div class="glass-card hover-lift fade-in-up delay-2 edu-card">
-                        <div class="edu-logo-wrapper">
-                            <img src="assets/images/lsc.png" alt="Lone Star College" class="edu-logo" onerror="this.style.display='none'">
-                        </div>
-                        <h3>Lone Star College</h3>
-                        <h4>Associate of Science</h4>
-                        <p class="text-muted">June 2019 - June 2021</p>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section id="skills" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="section-subtitle">Tools I use to build great software.</p>
+                    <h2 class="section-title text-gradient">Tech Stack</h2>
                 </div>
                 
                 <div class="skills-container fade-in-up delay-1">
@@ -309,25 +245,22 @@
                         </div>
                     </div>
                     <div class="skill-category glass-card">
-                        <h3>Frameworks & Libraries</h3>
+                        <h3>Frameworks & Architecture</h3>
                         <div class="tags">
+                            <span class="tag"><i class="devicon-network-plain colored"></i> Microservices</span>
+                            <span class="tag"><i class="devicon-go-plain colored"></i> REST APIs</span>
                             <span class="tag"><i class="devicon-spring-original colored"></i> Spring Boot</span>
                             <span class="tag"><i class="devicon-react-original colored"></i> React</span>
-                            <span class="tag"><i class="devicon-nextjs-original colored"></i> Next.js</span>
-                            <span class="tag"><i class="devicon-django-plain colored"></i> Django</span>
                             <span class="tag"><i class="devicon-nodejs-plain-wordmark colored"></i> Node.js</span>
                         </div>
                     </div>
                     <div class="skill-category glass-card">
-                        <h3>Tools & Architecture</h3>
+                        <h3>Tools & Infrastructure</h3>
                         <div class="tags">
-                            <span class="tag"><i class="devicon-network-plain colored"></i> Microservices</span>
-                            <span class="tag"><i class="devicon-go-plain colored"></i> REST APIs</span>
                             <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
                             <span class="tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS S3</span>
                             <span class="tag"><i class="devicon-githubactions-plain colored"></i> CI/CD</span>
                             <span class="tag"><i class="devicon-mysql-original colored"></i> MySQL</span>
-                            <span class="tag"><i class="devicon-azure-plain colored"></i> Azure</span>
                         </div>
                     </div>
                 </div>
@@ -339,7 +272,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="logo">Gabriel Goulis.</a>
-                <p>Software Engineering PhD Student</p>
+                <p>Connecting the dots in distributed systems.</p>
             </div>
             <div class="footer-links">
                 <h4>Connect</h4>
@@ -347,7 +280,6 @@
                     <li><a href="mailto:gabriel.goulis@gmail.com">gabriel.goulis@gmail.com</a></li>
                     <li><a href="https://github.com/g-goulis" target="_blank">GitHub</a></li>
                     <li><a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://scholar.google.com/citations?user=7l49DR8AAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></li>
                 </ul>
             </div>
         </div>
