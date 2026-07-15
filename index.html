@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellar | Premium Template</title>
-    <meta name="description" content="A premium, dynamic template for your next project.">
+    <title>Gabriel Goulis | Software Engineer</title>
+    <meta name="description" content="Personal portfolio and resume for Gabriel Goulis, Software Engineering PhD Student at University of Arizona.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,14 @@
 <body>
     <header class="header" id="header">
         <div class="container nav-container">
-            <a href="#" class="logo">Stellar.</a>
+            <a href="#" class="logo">Gabriel Goulis.</a>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#features" class="nav-link">Features</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#contact" class="btn btn-primary nav-cta">Get Started</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="assets/Gabriel_Goulis_Resume.pdf" class="btn btn-primary nav-cta" download>Download Resume</a></li>
                 </ul>
             </nav>
             <button class="mobile-toggle" aria-label="Toggle navigation">
@@ -34,26 +36,33 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-content fade-in-up">
-                    <span class="badge">v1.0 is live</span>
-                    <h1 class="hero-title">Build Something <span class="text-gradient">Extraordinary</span></h1>
-                    <p class="hero-subtitle">A premium, dark-mode focused template with glassmorphism effects and smooth micro-animations. Ready for your next big idea.</p>
+                    <span class="badge">Open to Opportunities</span>
+                    <h1 class="hero-title">Gabriel <span class="text-gradient">Goulis</span></h1>
+                    <p class="hero-subtitle">Software Engineering PhD Student at University of Arizona.<br>Specializing in distributed systems, microservice architecture, and static analysis.</p>
                     <div class="hero-actions">
-                        <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
-                        <a href="https://github.com" target="_blank" class="btn btn-secondary btn-lg">View Source</a>
+                        <a href="#experience" class="btn btn-primary btn-lg">View Experience</a>
+                        <a href="https://github.com/g-goulis" target="_blank" class="btn btn-secondary btn-lg">GitHub</a>
+                        <a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank" class="btn btn-secondary btn-lg">LinkedIn</a>
                     </div>
                 </div>
                 <div class="hero-visual fade-in-up delay-1">
-                    <div class="glass-card main-card">
+                    <div class="glass-card main-card terminal-card">
                         <div class="card-header">
                             <div class="dot red"></div>
                             <div class="dot yellow"></div>
                             <div class="dot green"></div>
                         </div>
                         <div class="card-body">
-                            <div class="skeleton-line skeleton-title"></div>
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line"></div>
-                            <div class="skeleton-line short"></div>
+                            <pre><code class="terminal-text">
+<span class="text-secondary">const</span> <span class="text-primary">developer</span> = {
+    name: <span class="text-green">'Gabriel Goulis'</span>,
+    location: <span class="text-green">'Greater Houston'</span>,
+    passions: [<span class="text-green">'Microservices'</span>, <span class="text-green">'AI/ML'</span>],
+    getGoals: () => {
+        return <span class="text-green">'Innovating with distributed systems.'</span>;
+    }
+};
+                            </code></pre>
                         </div>
                     </div>
                 </div>
@@ -61,27 +70,172 @@
             <div class="hero-glow"></div>
         </section>
 
-        <section id="features" class="features section">
+        <section id="about" class="section">
             <div class="container">
                 <div class="section-header fade-in-up">
-                    <h2 class="section-title">Why Choose Stellar</h2>
-                    <p class="section-subtitle">Crafted with attention to detail and modern web standards.</p>
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Passionate about pushing the boundaries of software engineering.</p>
                 </div>
-                <div class="grid features-grid">
-                    <div class="feature-card glass-card hover-lift fade-in-up delay-1">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Lightning Fast</h3>
-                        <p>Optimized for speed. No heavy frameworks, just clean, modern HTML, CSS, and JS.</p>
+                <div class="glass-card fade-in-up delay-1 about-card">
+                    <p>I am an avid student of Computer Science specifically software engineering. I possess a solid foundation in both frontend and backend development from prior experiences in microservice systems, managing web systems and other assorted roles.</p>
+                    <p>As a recent graduate of Baylor University with a Bachelor's in Computer Science and multiple semesters of experience in academic research, I naturally found great interest in pursuing this further. With 1 publication and 2 pending publications, I only grow more invested in digging further beneath the surface of concepts like Microservice Architecture.</p>
+                    <p>I find great joy in learning new programming concepts, languages, paradigms and frameworks. Solving challenging issues gives me a sense of accomplishment I cannot find outside of Computer Science. Personally I see no barrier to what I can achieve with the current state of technology the only bound is the extent of my creativity and passion which is only growing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">My professional journey so far.</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-lift">
+                            <h3>Platform Developer</h3>
+                            <h4>OFFICErING | Jan 2025 - July 2026</h4>
+                            <ul>
+                                <li>Built automated compliance monitoring that triggered real-time alerts for policy violations.</li>
+                                <li>Designed an automated testing framework using SIP user agents via DTMF-driven interactions.</li>
+                                <li>Built a Python pipeline for automated lead generation and AI-driven enrichment of 30,000 leads.</li>
+                                <li>Modernized legacy codebases integrating OpenTelemetry for distributed tracing and metrics.</li>
+                                <li>Designed CI/CD pipelines to streamline deployment of container images.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature-card glass-card hover-lift fade-in-up delay-2">
-                        <div class="feature-icon">🎨</div>
-                        <h3>Premium Design</h3>
-                        <p>Carefully selected color palettes, typography, and micro-interactions that WOW.</p>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-lift">
+                            <h3>Full Stack Developer</h3>
+                            <h4>ICPC | Dec 2024 - June 2025</h4>
+                            <ul>
+                                <li>Architected high-throughput REST APIs, cutting system latency by 90%.</li>
+                                <li>Modernized cloud storage architecture using AWS S3 presigned URLs offloading 99% of bandwidth.</li>
+                                <li>Optimized database queries across 10+ tables, reducing memory footprint by 50%.</li>
+                                <li>Automated compliance pipelines in Spring Boot.</li>
+                                <li>Developed scalable document generation engines for PDF credentials.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="feature-card glass-card hover-lift fade-in-up delay-3">
-                        <div class="feature-icon">📱</div>
-                        <h3>Fully Responsive</h3>
-                        <p>Looks perfect on every device, from massive desktop monitors to small smartphones.</p>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-lift">
+                            <h3>Student Researcher</h3>
+                            <h4>University of Arizona (Oulu, Finland) | May 2024 - Aug 2024</h4>
+                            <ul>
+                                <li>Collaborated on research papers on software architecture debt and architectural rule violations.</li>
+                                <li>Developed a Java tool using 40+ indicators to track Architectural Degradation over time.</li>
+                                <li>Leveraged control dependencies like REST calls to capture temporal data on system architecture.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-lift">
+                            <h3>Corporate Technology Intern</h3>
+                            <h4>H-E-B | May 2023 - July 2023</h4>
+                            <ul>
+                                <li>Updated employee training courses using new xAPI standard serving 145,000+ partners.</li>
+                                <li>Constructed internal tools to build new courses using React.</li>
+                                <li>Setup an open source LRS prototype using Docker.</li>
+                                <li>Rebuilt training course template decreasing load times by over 100%.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card hover-lift">
+                            <h3>Junior Developer</h3>
+                            <h4>OfficeRing | June 2019 - Aug 2022</h4>
+                            <ul>
+                                <li>Utilized PHP to implement backend functionality, supporting the adoption of 4 new features.</li>
+                                <li>Deployed a Node.js microservice to replicate data to S3 buckets, reducing server load.</li>
+                                <li>Built system health tests in Postman and deployed in Node.js and PM2.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Education</h2>
+                    <p class="section-subtitle">Academic background.</p>
+                </div>
+                <div class="grid education-grid">
+                    <div class="glass-card hover-lift fade-in-up">
+                        <h3>University of Arizona</h3>
+                        <h4>PhD in Software Engineering (CS)</h4>
+                        <p class="text-muted">July 2024 - August 2028</p>
+                    </div>
+                    <div class="glass-card hover-lift fade-in-up delay-1">
+                        <h3>Baylor University</h3>
+                        <h4>Bachelor of Science in Computer Science</h4>
+                        <p class="text-muted">July 2021 - May 2024</p>
+                    </div>
+                    <div class="glass-card hover-lift fade-in-up delay-2">
+                        <h3>Lone Star College</h3>
+                        <h4>Associate of Science</h4>
+                        <p class="text-muted">June 2019 - June 2021</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">Tools I use to build great software.</p>
+                </div>
+                
+                <div class="skills-container fade-in-up delay-1">
+                    <div class="skill-category glass-card">
+                        <h3>Languages</h3>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category glass-card">
+                        <h3>Tools & Architecture</h3>
+                        <div class="tags">
+                            <span class="tag">Microservices</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS S3</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">n8n</span>
+                            <span class="tag">Azure</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,26 +245,20 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <a href="#" class="logo">Stellar.</a>
-                <p>Building the web of tomorrow.</p>
+                <a href="#" class="logo">Gabriel Goulis.</a>
+                <p>Software Engineering PhD Student</p>
             </div>
             <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="footer-socials">
                 <h4>Connect</h4>
-                <div class="social-icons">
-                    <a href="#" aria-label="Twitter">𝕏</a>
-                    <a href="#" aria-label="GitHub">GH</a>
-                </div>
+                <ul>
+                    <li><a href="mailto:gabriel.goulis@gmail.com">gabriel.goulis@gmail.com</a></li>
+                    <li><a href="https://github.com/g-goulis" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/gabriel-goulis-0509ab166" target="_blank">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Stellar Template. All rights reserved.</p>
+            <p>&copy; 2026 Gabriel Goulis. All rights reserved.</p>
         </div>
     </footer>
 
