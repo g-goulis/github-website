@@ -166,6 +166,7 @@ body {
 .header.scrolled {
     background: var(--bg-card);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
 }
@@ -240,10 +241,10 @@ body {
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     z-index: 2;
 }
 
@@ -269,13 +270,14 @@ body {
     font-size: 1.25rem;
     color: var(--text-muted);
     margin-bottom: 2.5rem;
-    max-width: 90%;
+    max-width: 800px;
 }
 
 .hero-actions {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-glow {
@@ -293,45 +295,7 @@ body {
     background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(236,72,153,0.05) 50%, rgba(0,0,0,0) 70%);
 }
 
-/* Terminal Card in Hero */
-.terminal-card {
-    padding: 1.5rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-    transition: transform 0.5s ease;
-    font-family: monospace;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    background: #1e1e24; /* Keep terminal dark even in light mode */
-}
-[data-theme="dark"] .terminal-card {
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
 
-.terminal-card:hover {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
-}
-
-.card-header {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
-
-.terminal-text {
-    color: #f8fafc; /* Terminal text always light */
-    white-space: pre-wrap;
-}
 
 /* Sections */
 .section-header {
@@ -445,6 +409,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
+    padding-right: 2.5rem;
 }
 
 .timeline-title-group h3 {
@@ -489,7 +454,7 @@ body {
 }
 
 .timeline-item.expanded .timeline-body {
-    max-height: 500px;
+    max-height: 1000px;
     margin-top: 1rem;
     opacity: 1;
 }
@@ -669,7 +634,6 @@ body {
 /* Responsive */
 @media (max-width: 992px) {
     .hero-title { font-size: 3rem; }
-    .hero-container { grid-template-columns: 1fr; gap: 3rem; }
     .hero-glow { right: 50%; transform: translate(50%, -50%); }
     .footer-container { flex-direction: column; text-align: center; align-items: center; }
 }
